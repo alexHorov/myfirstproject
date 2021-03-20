@@ -134,15 +134,11 @@ body {
 
 /* ---------------------------------------Блок с првава--------------------*/
 
-.nav-items {}
-
 .nav__menu-link {
     padding: 0 15px;
     font-size: 13px;
     color: #5b5b5b;
 }
-
-.news {}
 
 .news__main {
     display: flex;
