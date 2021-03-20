@@ -1,0 +1,838 @@
+/*Обнуление*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    color: #282f33;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.44;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(36, 35, 35);
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.logo img {
+    height: 37px;
+    display: block;
+    object-fit: cover;
+}
+
+.lupa__link {
+    height: 27px;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.menu__list li {
+    padding: 0 20px;
+    display: inline-block;
+    list-style-type: none;
+    line-height: 50px;
+}
+
+.menu__list a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 50px;
+    transition: .5s ease;
+    text-decoration: none;
+}
+
+.menu__list li:nth-child(1) a:hover {
+    color: coral;
+}
+
+.menu__list li:nth-child(2) a:hover {
+    color: red;
+}
+
+.menu__list li:nth-child(3) a:hover {
+    color: blue;
+}
+
+.menu__list li:nth-child(4) a:hover {
+    color: gold;
+}
+
+.menu__list li:nth-child(5) a:hover {
+    color: green;
+}
+
+
+/*------------------------------ ШАПКА НИЗ -------------------------------*/
+
+.nav-items a::after {
+    content: '';
+    border-left: 1px solid grey;
+    margin: 15px;
+}
+
+.header__bottom {
+    background-color: whitesmoke;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 15 15px;
+}
+
+.nav-list li a {
+    padding: 0 15px;
+    color: #5b5b5b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    background-color: transparent;
+    border-left: 1px solid #5b5b5b;
+}
+
+.nav-list li:nth-child(9) a {
+    border-right: 1px solid #5b5b5b;
+}
+
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------Блок с првава--------------------*/
+
+.nav-items {}
+
+.nav__menu-link {
+    padding: 0 15px;
+    font-size: 13px;
+    color: #5b5b5b;
+}
+
+.news {}
+
+.news__main {
+    display: flex;
+    width: 100%;
+}
+
+.dws-wrapper {
+    max-width: 595px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    /*border: solid 5px rgba(255, 255, 255, 0.8);*/
+    /*background: linear-gradient(20deg, #f00, #00f);*/
+}
+
+.dws-wrapper a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dws-wrapper a img {
+    width: 100%;
+}
+
+.dws-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    /*помогло растянуть картинку на вес блок*/
+}
+
+.dws-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 40px 20px 40px 20px;
+    /*opacity: 1;*/
+    z-index: 100;
+    transition: .5s ease;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.dws-text span {
+    font-size: 25px;
+    opacity: 1;
+}
+
+.dws-text p {
+    font-size: 14px;
+    opacity: 0;
+}
+
+.dws-text:hover {
+    transform: translateY(-25%);
+}
+
+.dws-text:hover p {
+    opacity: 1;
+}
+
+.dws-wrapper a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    mix-blend-mode: darken;
+}
+
+.dws-wrapper a:before {
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: rgba(230, 12, 50, 0.8);
+}
+
+.dws-wrapper:hover a:before {
+    opacity: 1;
+}
+
+.dws-wrapper:hover .dws-text {
+    opacity: 1;
+}
+
+
+/*---------------------------- <Блок с 4 фотками-------------------------*/
+
+.news__main-right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    overflow: hidden;
+}
+
+.news-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-item a img {
+    width: 100%;
+}
+
+.news-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-item a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.news-item:hover a:before {
+    opacity: 1;
+}
+
+.one a:before {
+    background: rgba(5, 148, 53, 0.3);
+}
+
+.two a:before {
+    background: rgba(248, 91, 0, 0.3);
+}
+
+.three a:before {
+    background: rgba(226, 0, 247, 0.3);
+}
+
+.four a:before {
+    background: rgba(231, 3, 3, 0.3);
+}
+
+.news-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px 10px 20px 10px;
+    z-index: 100;
+    transition: .5s ease;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.news-text span {
+    font-size: 14px;
+    opacity: 1;
+}
+
+.news-text p {
+    font-size: 12px;
+    opacity: 0;
+}
+
+.news-text:hover {
+    transform: translateY(-25%);
+}
+
+.news-text:hover p {
+    opacity: 1;
+}
+
+.news__main-right a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+
+/*------------------------------Колонка и сайдбар--------------------*/
+
+.column {
+    margin: 25px 0 25px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-post {
+    /*display: flex;*/
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+}
+
+.row-item {
+    display: flex;
+    max-width: 800px;
+    padding: 35px 15px 35px 0;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.row-item:last-child {
+    border-bottom: none;
+}
+
+.theme {
+    max-width: 815px;
+    padding: 35px 0px 0px 0;
+}
+
+.sidebar {
+    padding: 0 15px;
+    margin: 30px 0 0 0;
+    /*background-color: chartreuse;*/
+    max-width: 300px;
+}
+
+
+/*---------------------Содержание колонки---------------------------------*/
+
+.box-img {
+    padding: 0 15px 0 0;
+    position: relative;
+}
+
+.box-img a img {
+    max-width: 250px;
+    max-height: 200px;
+}
+
+.box-img a {
+    width: 100%;
+    height: 100%;
+}
+
+.box-img_link {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 5;
+}
+
+.box-img_link a {
+    color: #fff;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.box-img_link a:hover {
+    text-decoration: underline;
+}
+
+.box-text h2 {
+    margin: 0 0 10px 0;
+}
+
+.box-text h2 a {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box-text h2 a:hover {
+    color: rgb(0, 130, 216);
+    text-decoration: none;
+}
+
+.box-text p {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.box-text p a {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.box-text p a:hover {
+    text-decoration: underline;
+}
+
+.box-text span {
+    font-size: 15px;
+}
+
+
+/*-----------------КНОПКА----------------------*/
+
+.row-btn {
+    max-width: 815px;
+    background: #a8a8a8;
+    display: flex;
+}
+
+.row-btn a {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px;
+    margin-bottom: 1px;
+}
+
+
+/*---------------------Содержание колонки Конец----------------------------*/
+
+
+/*-------------------Стили для сылок в блоке box-img -----------------------*/
+
+.post {
+    background: rgba(247, 150, 5, 0.959);
+}
+
+.feature {
+    background: rgba(70, 8, 241, 0.979);
+}
+
+.blog {
+    background: rgba(8, 241, 47, 0.979);
+}
+
+.view {
+    background: rgba(247, 58, 1, 0.979);
+}
+
+
+/*----------------------------------- Сайдбар----------------------- */
+
+.block {
+    margin: 30px 0 0 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #e9eaed;
+}
+
+.block h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 13px;
+}
+
+.weeknews a img {
+    object-fit: contain;
+    width: 270px;
+    height: 190px;
+}
+
+.weeknews_2 a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.weeknews_2 a:hover {
+    color: rgb(0, 130, 216);
+    text-decoration: none;
+}
+
+.partnews {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.partnews:last-child {
+    border-bottom: none;
+}
+
+.partners a {
+    width: 100%;
+    height: 100%;
+    margin: 0 15px 0 0;
+}
+
+.partners a img {
+    max-width: 80px;
+    max-height: 70px;
+}
+
+.partnews-text h2 {
+    font-size: 14px;
+}
+
+.partnews-text h2 a {
+    text-decoration: none;
+    color: #000;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+.partnews-text h2 a:hover {
+    color: rgb(0, 130, 216);
+    text-decoration: none;
+}
+
+
+/*------------------------------Сайдбар конец-------------------------*/
+
+
+/*----------------------------------соцсети-------------------------*/
+
+.social a {
+    margin: 0 0 0 15px;
+}
+
+.social a:first-child {
+    margin: none;
+    /*-------------------самое обсуждаемое ------------------------*/
+}
+
+.hot-weeknews_2 {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.hot-weeknews a img {
+    object-fit: contain;
+    width: 270px;
+    height: 190px;
+}
+
+.hot-weeknews_2 a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.hot-weeknews_2 a:hover {
+    color: rgb(0, 130, 216);
+}
+
+
+/* ---------------------------------Тема Сони-----------------------------*/
+
+.theme-iner {
+    position: relative;
+}
+
+.theme-iner::before {
+    content: '#';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgb(0, 0, 0, 0.5);
+}
+
+.theme-iner:hover {
+    background: rgb(0, 0, 0, 0.8);
+}
+
+.theme-iner img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: alpha(opacity=80) black;
+    background-color: #000;
+}
+
+.theme-img_link {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 5;
+}
+
+.theme-img_link a {
+    color: #fff;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgb(255, 2, 2);
+}
+
+.theme-img_link:hover a {
+    text-decoration: underline;
+}
+
+.theme-text {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: 5;
+}
+
+.theme-text h3 {
+    color: #fff;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.theme-text ul {
+    color: #fff;
+}
+
+.theme-text li a {
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.theme-text li:hover a {
+    text-decoration: underline;
+}
+
+.theme-text span a {
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.theme-text span:hover a {
+    color: red;
+}
+
+
+/* -------------------------------Тема Сони конец-------------------------*/
+
+
+/* --------------------------------Слайдер*-----------------------------------*/
+
+.slider {
+    width: 100%;
+    background-color: rgb(58, 56, 56);
+}
+
+.slider__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider__top {
+    position: relative;
+    height: 100px;
+}
+
+.slider-top_link {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 5;
+}
+
+.slider-top_link a {
+    color: #fff;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgb(255, 2, 2);
+}
+
+.slider-top_link:hover a {
+    text-decoration: underline;
+}
+
+.slider-top_btn {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 5;
+}
+
+.slider-top_btn a {
+    background-color: rgb(136, 133, 133);
+    padding: 8px 18px;
+    font-size: 14px;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.slider__bottom {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    margin: 0px -5px;
+    justify-content: space-between;
+}
+
+.slider__row {
+    flex: 0 1 25%;
+    padding: 0px 5px;
+}
+
+.slider-row_video {
+    width: 100%;
+}
+
+.slider-row_video a img {
+    width: 220px;
+    height: 200x;
+    object-fit: contain;
+}
+
+.slider-row_link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.slider-row_link:hover a {
+    color: rgb(0, 130, 216);
+}
+
+
+/*Слайдер конец*/
+
+
+/* ------------------------------------Подвал-------------------------------*/
+
+.footer {
+    padding: 15px 0 15px 0;
+    width: 100%;
+    background-color: rgb(36, 35, 35);
+}
+
+.footer__main {
+    height: 300px;
+    display: flex;
+}
+
+.footer__logo {
+    padding: 0 15px 0 15px;
+}
+
+.footer__right {
+    margin: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__link {
+    display: inline-block;
+}
+
+.footer__link li {
+    display: inline-block;
+    list-style: none;
+}
+
+.footer__link li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    font-size: 200;
+}
+
+.footer__link li:hover a {
+    color: rgb(0, 130, 216);
+}
+
+.footer__text {
+    margin: 15px 0 0 0;
+}
+
+.footer__text p {
+    color: #737373;
+}
+
+.footer__social {
+    margin: 15px 0 0 0;
+}
+
+.footer__social a {
+    padding: 10px;
+}
+
+
+/*Подвал коннец*/
