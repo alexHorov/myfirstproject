@@ -691,6 +691,7 @@ body {
 .slider__main {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .slider__top {
@@ -741,10 +742,13 @@ body {
     display: flex;
     margin: 0px -5px;
     justify-content: space-between;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
 }
 
 .slider__row {
-    flex: 0 1 25%;
+    flex: 1 1 25%;
     padding: 0px 5px;
 }
 
@@ -753,8 +757,8 @@ body {
 }
 
 .slider-row_video a img {
-    width: 220px;
-    height: 200x;
+    width: 290px;
+    height: 200px;
     object-fit: contain;
 }
 
